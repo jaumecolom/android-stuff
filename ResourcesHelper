@@ -1,0 +1,41 @@
+/**
+ * Created by Jaume Colom Ferrer on 23/09/2015.
+ */
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
+import android.support.v4.content.ContextCompat;
+
+/**
+ * Resources helper.
+ */
+public class ResourcesHelper {
+
+    @SuppressWarnings("deprecation")
+    public static Drawable getDrawable(Context context, @DrawableRes int resId) {
+        Resources resources = context.getResources();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            return resources.getDrawable(resId, null);
+        }
+        return resources.getDrawable(resId);
+    }
+
+    public static String getStringResource(Context context, int string) {
+        return context.getResources().getString(string);
+    }
+
+    public static int getColorResource(Context context, @ColorRes int color) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return ContextCompat.getColor(context, color);
+        }
+        return context.getResources().getColor(color);
+    }
+
+}
