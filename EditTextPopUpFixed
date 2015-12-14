@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 /**
- * Created by jcolom on 23/11/15.
+ * Created by Jaume Colom Ferrer on 14/12/2015
  */
 public class EditTextPopUpFixed extends AppCompatEditText {
 
