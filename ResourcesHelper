@@ -1,7 +1,3 @@
-/**
- * Created by Jaume Colom Ferrer on 23/09/2015.
- */
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -12,6 +8,7 @@ import android.support.v4.content.ContextCompat;
 
 /**
  * Resources helper.
+ * Created by Jaume Colom Ferrer on 23/09/2015.
  */
 public class ResourcesHelper {
 
